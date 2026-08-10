@@ -2,6 +2,9 @@
 #include <stdlib.h>
 
 int removeDuplicates(int* nums, int numsSize) {
+    if (nums == NULL || numsSize <= 0) {
+        return 0;
+    }
     if (numsSize <= 2) {
         return numsSize;
     }

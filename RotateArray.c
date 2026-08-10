@@ -12,8 +12,18 @@ void reverse(int* nums, int s, int e) {
 }
 
 void rotate(int* nums, int numsSize, int k) {
-    k = k % numsSize; 
+    if (nums == NULL || numsSize <= 1) {
+        return;
+    }
+    k = k % numsSize;
+    if (k < 0) {
+        k += numsSize;
+    }
+    if (k == 0) {
+        return;
+    }
     reverse(nums, 0, numsSize - 1);
     reverse(nums, 0, k - 1);
     reverse(nums, k, numsSize - 1);
 }
+
