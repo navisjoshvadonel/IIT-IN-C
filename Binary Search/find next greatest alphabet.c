@@ -12,4 +12,4 @@ char nextGreatestLetter(char* letters, int lettersSize, char target) {
     }
     
     return letters[left % lettersSize];
-}
+}
